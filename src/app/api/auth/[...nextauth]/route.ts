@@ -4,12 +4,15 @@ import User from "@/models/User";
 import { verifyPassword } from "@/utils/auth/auth";
 import { connectDB } from "@/utils/connectDB";
 
+
+// interfaces
 interface AuthOptions {
   session: {
     strategy: SessionStrategy;
   };
   providers: CredentialsConfig<Record<string, CredentialInput>>[];
 }
+
 
 export const authOptions: AuthOptions = {
   session: { strategy: "jwt" },
